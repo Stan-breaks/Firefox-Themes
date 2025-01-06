@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap");
+@-moz-document url(about:home), url(about:newtab) {
+  :root {
+    --gruvbox-bg: #282828;
+    --gruvbox-fg: #ebdbb2;
+    --gruvbox-yellow: #fabd2f;
+    --gruvbox-red: #fb4934;
+    --gruvbox-purple: #d3869b;
+  }
+
+  body {
+    background-image: url("wallpapers/2.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    margin: 0;
+    padding: 40px;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Noto Sans JP", sans-serif;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(40, 40, 40, 0.7);
+    backdrop-filter: blur(3px);
+    z-index: 0;
+  }
+
+  .outer-wrapper {
+    content: "";
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 800px;
+    background: rgba(40, 40, 40, 0.8);
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0 0 30px rgba(250, 189, 47, 0.2);
+  }
+
+  .outer-wrapper::before {
+    content: "グルーヴボックスの夜";
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--gruvbox-yellow);
+    text-align: start;
+    display: block;
+    text-shadow: 0 0 10px rgba(250, 189, 47, 0.5);
+  }
+
+  .top-sites-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .top-sites-list .top-site-outer:nth-child(n + 9) {
+    display: none !important;
+  }
+
+  .top-site-outer {
+    background-color: rgba(211, 134, 155, 0.1);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 8px;
+  }
+
+  .top-site-outer:hover {
+    background-color: rgba(211, 134, 155, 0.15) !important;
+    transform: translateY(-2px);
+  }
+
+  .top-site-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    transition: transform 0.2s ease;
+  }
+
+  .top-site-outer .title {
+    color: var(--gruvbox-fg) !important;
+    font-size: 0.85em;
+    font-weight: 500 !important;
+    max-width: 90%;
+  }
+
+  .logo-and-wordmark,
+  #snippets,
+  .context-menu-button,
+  .personalize-button,
+  .search-wrapper {
+    display: none !important;
+  }
+}
