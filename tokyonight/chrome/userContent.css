@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap");
+
+@-moz-document url(about:home), url(about:newtab) {
+  :root {
+    --tokyo-bg: #1a1b26;
+    --tokyo-fg: #a9b1d6;
+    --tokyo-blue: #7aa2f7;
+    --tokyo-pink: #f7768e;
+    --tokyo-purple: #9d7cd8;
+  }
+
+  body {
+    background-image: url("wallpapers/3.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    margin: 0;
+    padding: 40px;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Noto Sans JP", sans-serif;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 27, 38, 0.7);
+    z-index: 0;
+  }
+
+  .outer-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 800px;
+    background: rgba(26, 27, 38, 0.8);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(122, 162, 247, 0.3);
+  }
+
+  /* Tokyo-themed greeting */
+  .outer-wrapper::before {
+    content: "東京の夜";
+    font-size: 3em; /* Reduced font size */
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--tokyo-blue);
+    text-align: center;
+    display: block;
+    text-shadow: 0 0 10px rgba(122, 162, 247, 0.5);
+  }
+
+  /* Style the top sites */
+  .top-sites-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-height: 250px;
+  }
+  .top-sites-list .top-site-outer:nth-child(n + 9) {
+    display: none !important;
+  }
+  .top-site-outer {
+    background-color: rgba(157, 124, 216, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .top-site-outer:hover {
+    background-color: rgba(157, 124, 216, 0.2) !important;
+    transform: translateY(-5px);
+  }
+  .top-site-outer:hover .top-site-icon {
+    transform: scale(1.1);
+  }
+  .top-site-outer .title {
+    color: var(--tokyo-fg) !important;
+    font-weight: bold !important;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    max-width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .top-site-outer:hover .title {
+    color: var(--tokyo-blue) !important;
+  }
+  .top-site-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--tokyo-purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: var(--tokyo-bg);
+  }
+
+  /* Hide Firefox logo and unnecessary elements */
+  .logo-and-wordmark,
+  #snippets,
+  .personalize-button,
+  .search-wrapper {
+    display: none !important;
+  }
+}
