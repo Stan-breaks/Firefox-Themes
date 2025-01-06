@@ -1,7 +1,8 @@
 # Tokyo Night Fox & Gruvbox Theme
 
 ![Tokyo Night Preview](https://github.com/user-attachments/assets/f9274d7b-a1f0-41db-8c40-83444a947ad4)
-![Gruvbox Preview](path/to/gruvbox-preview.png)
+![Gruvbox Preview](https://github.com/user-attachments/assets/0178dee8-8379-44cb-9c91-effc3b018396)
+
 
 ## Table of Contents
 
