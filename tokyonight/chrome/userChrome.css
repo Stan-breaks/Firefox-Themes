@@ -4,12 +4,6 @@
   margin: 2px !important;
 }
 
-.titlebar-buttonbox-container {
-  display: none !important;
-  margin-right: 12px !important;
-}
-
-#back-button,
 #forward-button {
   display: none !important;
 }
